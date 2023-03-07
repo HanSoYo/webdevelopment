@@ -68,6 +68,7 @@ main h1 {
     background-color: rgb(228, 206, 182);
     border-radius: 6px;
     overflow: hidden;
+    list-style: none;
 }
 
 .food-item img {
@@ -77,8 +78,21 @@ main h1 {
 }
 
 .food-item-content {
-    padding: 16px;
+    /* padding: 16px; */
+    /* padding: 10%; */
+    /* padding: 0.1em; */ 
+    /* em 유닛은 요소 자체의 폰트 크기 기반으로 계산. 
+    em 유닛을 폰트 크기가 아닌 속성에 사용하면 em 유닛의 계산 결과는 실제 요소의 폰트 크기에 기반해서 도출.
+    글자 그기가 200%(32px)이면 패딩 em은 32 * 0.1 
+    rem은 200%으로 설정한 게 중요한 게 아니라 브라우저에서 설정한 font size 16px이 중요함. */
     text-align: center;
+
+}
+
+h2 {
+    /* font-size: 100%; */
+    font-size: 2rem;
+    /* rem 유닛은 항상 최상위(HTML) 요소를 참조. 폰트 크기의 유동성 증가. 기기 별 픽셀 차이 영향 X.  */
 }
 
 .btn {
@@ -91,3 +105,15 @@ main h1 {
 .btn:hover {
     background-color: rgb(221, 134, 34);
 }
+
+
+
+
+
+
+
+/* 
+%는 항상 부모 요소를 참조하고
+rem은 최상위 요소(html)의 폰트 크기를 참조 (크롬에서 사용자가 설정한 폰트 크기)
+em은 그 요소의 실제 폰트 크기 참조 (크롬에서 사용자가 설정한 폰트 크기 * 개발자가 설정한 폰트 크기 비율)
+*/
